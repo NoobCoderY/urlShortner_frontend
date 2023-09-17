@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body{
+height: 100vh;
+}
+
+#__next{
+  height: 100%;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+ 
+}
+
+.no-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(146, 64, 14, 0.5);
+  border-radius: 6px;
+  height:20%;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: 1px;  /* Firefox */
+}
+
+.shadowcolor{
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 7px;
+}
