@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React,{useState,useEffect} from "react";
 import { GiClick } from "react-icons/gi";
 import axios from "axios";
 import { useRouter } from "next/router";
@@ -8,10 +8,10 @@ import { toast } from "react-hot-toast";
 
 const all = () => {
   
-    const [allUrl, setallUrl] = React.useState<any>();
-    const [modalIsOpen, setIsOpen] = React.useState(false);
-    const [modalId, setModalId] = React.useState("")
-     const[urlAnalytics,setUrlAnalytics]=React.useState()
+    const [allUrl, setallUrl] = useState<any>();
+    const [modalIsOpen, setIsOpen] = useState(false);
+    const [modalId, setModalId] = useState("")
+     const[urlAnalytics,setUrlAnalytics]=useState()
 
   function openModal() {
     setIsOpen(true);
