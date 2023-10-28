@@ -29,7 +29,10 @@ const All = () => {
   }
 
   const fetechALlUrls = async () => {
-    await axios.get("https://urlshortner-hece.onrender.com/api/v1/getall").then((data) => {
+    await axios.get("https://urlshortner-hece.onrender.com/api/v1/getall",{ headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+    },}).then((data) => {
       console.log(data.data.allUrl);
       setallUrl(data.data.allUrl);
     });
@@ -44,7 +47,12 @@ const All = () => {
       return
       }
       try {
-        await axios.get(`https://urlshortner-hece.onrender.com/api/v1/analytics/${modalId}`).then((data) => {
+        await axios.get(`https://urlshortner-hece.onrender.com/api/v1/analytics/${modalId}`, {
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+        }).then((data) => {
             setUrlAnalytics(data.data)
           });
        } catch (error:any) {
