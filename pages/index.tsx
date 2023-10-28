@@ -14,7 +14,6 @@ export default function Home() {
       await axios
         .post("https://urlshortner-hece.onrender.com/api/v1/shorten", {
           headers: {
-            "Content-Type": "application/json",
             "Access-Control-Allow-Origin": "*",
           },
         } ,{
