@@ -12,13 +12,17 @@ export default function Home() {
   
     try {
       await axios
-        .post("https://urlshortner-hece.onrender.com/api/v1/shorten", {
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-          },
-        } ,{
+        .post("https://urlshortner-hece.onrender.com/api/v1/shorten", 
+         
+         {
           url: longUrl,
-        })
+          }, {
+           headers: {
+            "Content-Type": "application/json",
+              "Access-Control-Allow-Origin": "*",
+            },
+          }
+        )
         .then((data) => {
           setShortUrl(data.data.shortID)
           toast.success("successfully convert");
