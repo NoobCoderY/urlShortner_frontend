@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import ContentModal from "@/component/ContentModal";
 import { toast } from "react-hot-toast";
 
-const all = () => {
+const All = () => {
   
     const [allUrl, setallUrl] = useState<any>();
     const [modalIsOpen, setIsOpen] = useState(false);
@@ -92,4 +92,4 @@ const all = () => {
   );
 };
 
-export default all;
+export default All;
