@@ -29,7 +29,7 @@ const All = () => {
   }
 
   const fetechALlUrls = async () => {
-    await axios.get("http://localhost:8000/api/v1/getall").then((data) => {
+    await axios.get("https://urlshortner-hece.onrender.com/api/v1/getall").then((data) => {
       console.log(data.data.allUrl);
       setallUrl(data.data.allUrl);
     });
@@ -44,7 +44,7 @@ const All = () => {
       return
       }
       try {
-        await axios.get(`http://localhost:8000/api/v1/analytics/${modalId}`).then((data) => {
+        await axios.get(`https://urlshortner-hece.onrender.com/api/v1/analytics/${modalId}`).then((data) => {
             setUrlAnalytics(data.data)
           });
        } catch (error:any) {

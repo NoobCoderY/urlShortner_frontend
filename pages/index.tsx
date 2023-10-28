@@ -12,7 +12,7 @@ export default function Home() {
   
     try {
       await axios
-        .post("http://localhost:8000/api/v1/shorten", {
+        .post("https://urlshortner-hece.onrender.com/api/v1/shorten", {
           url: longUrl,
         })
         .then((data) => {
@@ -26,7 +26,7 @@ export default function Home() {
 
   const redirectPage = async () => {
     try {
-      window.open(`http://localhost:8000/api/v1/${shortUrl}`, "_blank");
+      window.open(`https://urlshortner-hece.onrender.com/api/v1/${shortUrl}`, "_blank");
     } catch (error) {
       console.log(error);
 
